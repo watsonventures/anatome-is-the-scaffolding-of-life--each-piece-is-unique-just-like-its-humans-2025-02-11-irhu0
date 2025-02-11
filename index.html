@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anatome - Unique Designer Pieces</title>
     <meta name="description" content="Limited edition designer pieces, handcrafted with premium materials. Only 75 pieces per color ever made.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body class="font-sans antialiased">
     <!-- Announcement Bar -->
@@ -17,16 +36,39 @@
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="text-2xl font-bold">Anatome</div>
+            <a href="https://watsonventures.github.io/anatome-is-the-scaffolding-of-life--each-piece-is-unique-just-like-its-humans-2025-02-11-irhu0" class="text-2xl font-bold transition-colors duration-300 hover:text-gray-600">Anatome</a>
+            
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
-                <a href="#" class="hover:text-gray-600 transition-colors">Shop</a>
-                <a href="#" class="hover:text-gray-600 transition-colors">About</a>
-                <a href="#" class="hover:text-gray-600 transition-colors">Contact</a>
+                <a href="#features" class="hover:text-gray-600 transition-colors duration-300">Features</a>
+                <a href="#benefits" class="hover:text-gray-600 transition-colors duration-300">Benefits</a>
+                <a href="#about" class="hover:text-gray-600 transition-colors duration-300">About</a>
+                <a href="#testimonials" class="hover:text-gray-600 transition-colors duration-300">Testimonials</a>
+                <a href="#faq" class="hover:text-gray-600 transition-colors duration-300">FAQ</a>
             </div>
-            <button class="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors">
-                Shop Now
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden" aria-label="Open mobile menu">
+                <i class="fas fa-bars text-2xl"></i>
             </button>
+
+            <!-- Shop Now Button -->
+            <a href="https://anatome.shop/shop/" class="hidden md:inline-block bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+                Shop Now
+            </a>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white">
+            <div class="px-4 py-2 space-y-4">
+                <a href="#features" class="block py-2 hover:text-gray-600 transition-colors duration-300">Features</a>
+                <a href="#benefits" class="block py-2 hover:text-gray-600 transition-colors duration-300">Benefits</a>
+                <a href="#about" class="block py-2 hover:text-gray-600 transition-colors duration-300">About</a>
+                <a href="#testimonials" class="block py-2 hover:text-gray-600 transition-colors duration-300">Testimonials</a>
+                <a href="#faq" class="block py-2 hover:text-gray-600 transition-colors duration-300">FAQ</a>
+                <a href="https://anatome.shop/shop/" class="block py-2 text-white bg-black rounded-md px-4 hover:bg-gray-800 transition-colors duration-300">Shop Now</a>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -45,7 +87,7 @@
                     LIMITED EDITION! Only 75 of each color will ever be made
                 </p>
                 <a href="https://anatome.shop/shop/" 
-                   class="inline-block bg-white text-black px-8 py-4 rounded-md text-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 duration-300">
+                   class="inline-block bg-white text-black px-8 py-4 rounded-md text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                     Shop Limited Edition
                 </a>
             </div>
@@ -53,117 +95,182 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-24 bg-gray-50">
+    <section id="features" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Premium Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-3xl mb-4">🎨</div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102">
+                    <div class="text-3xl mb-4"><i class="fas fa-palette"></i></div>
                     <h3 class="text-xl font-semibold mb-4">Limited Edition Drops</h3>
-                    <p class="text-gray-600">Exclusive collections with only 75 pieces per color ever made.</p>
+                    <p class="text-gray-600">Exclusive collections with only 75 pieces per color ever made. Each piece numbered and authenticated.</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-3xl mb-4">✨</div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102">
+                    <div class="text-3xl mb-4"><i class="fas fa-star"></i></div>
                     <h3 class="text-xl font-semibold mb-4">Vibrant Colors</h3>
-                    <p class="text-gray-600">Carefully selected palette that makes each piece stand out.</p>
+                    <p class="text-gray-600">Carefully selected palette that makes each piece stand out, featuring rich and bold tones.</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-3xl mb-4">🎯</div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102">
+                    <div class="text-3xl mb-4"><i class="fas fa-gem"></i></div>
                     <h3 class="text-xl font-semibold mb-4">Distressed Leather</h3>
-                    <p class="text-gray-600">Premium materials aged to perfection for unique character.</p>
+                    <p class="text-gray-600">Premium materials aged to perfection for unique character, sourced from sustainable tanneries.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About Anatome</h2>
+            <div class="max-w-3xl mx-auto text-center space-y-8">
+                <p class="text-gray-700 leading-relaxed">
+                    Founded in 2020, Anatome emerged from a passion for combining traditional craftsmanship with modern design. Our journey began in a small workshop where we experimented with various techniques to create pieces that would stand out in today's fast-fashion world.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    Our mission is to create limited edition pieces that celebrate individuality and craftsmanship. We believe in sustainable production, ethical practices, and creating products that last a lifetime. Every Anatome piece is a testament to our commitment to quality, uniqueness, and environmental responsibility.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <!-- Benefit 1 -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-3xl font-bold mb-6">Each Piece is Unique</h2>
-                    <p class="text-gray-600 mb-8">No two pieces are exactly alike, ensuring you own something truly special.</p>
-                    <a href="https://anatome.shop/shop/" class="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors">
-                        Discover Your Piece
-                    </a>
+    <section id="benefits" class="py-16">
+        <!-- Benefit 1 -->
+        <div class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold mb-6">Each Piece is Unique</h2>
+                        <p class="text-gray-600 mb-8">Every Anatome creation is a masterpiece in its own right, featuring naturally varying patterns and textures in the leather. Our artisans carefully select and work with each piece to enhance its natural characteristics, ensuring that no two items are exactly alike. This dedication to uniqueness means you'll own a truly one-of-a-kind piece that tells its own story.</p>
+                        <a href="https://anatome.shop/shop/" class="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+                            Discover Your Piece
+                        </a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
+                             alt="Unique pieces" 
+                             class="rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+                    </div>
                 </div>
-                <div class="order-1 md:order-2">
-                    <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
-                         alt="Unique pieces" 
-                         class="rounded-lg shadow-xl">
+            </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
+                             alt="Handmade quality" 
+                             class="rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Handmade Quality</h2>
+                        <p class="text-gray-600 mb-8">Our master craftsmen bring decades of experience to every piece they create. Using traditional techniques passed down through generations, combined with modern innovation, each item undergoes a meticulous 20-step process to ensure the highest quality. We source only the finest materials and employ rigorous quality control to guarantee excellence in every detail.</p>
+                        <a href="https://anatome.shop/shop/" class="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+                            Experience Quality
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold mb-6">Stand Out ANYWHERE</h2>
+                        <p class="text-gray-600 mb-8">Our designs are crafted to capture attention and spark conversations. With bold aesthetics and innovative details, each piece becomes a statement of personal style. Whether you're at a casual meetup or a formal event, Anatome pieces are versatile enough to elevate any outfit while maintaining their distinctive character that sets you apart from the crowd.</p>
+                        <a href="https://anatome.shop/shop/" class="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+                            Make Your Statement
+                        </a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
+                             alt="Stand out anywhere" 
+                             class="rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefit 2 -->
-    <section class="py-16 bg-gray-50">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
-                         alt="Handmade quality" 
-                         class="rounded-lg shadow-xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"The attention to detail is incredible. I've never owned a piece that feels so premium and unique. Worth every penny!"</p>
+                    <div class="font-semibold">Sarah Johnson</div>
+                    <div class="text-sm text-gray-500">Fashion Blogger</div>
                 </div>
-                <div>
-                    <h2 class="text-3xl font-bold mb-6">Handmade Quality</h2>
-                    <p class="text-gray-600 mb-8">Crafted with precision and care by skilled artisans.</p>
-                    <a href="https://anatome.shop/shop/" class="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors">
-                        Experience Quality
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Benefit 3 -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-3xl font-bold mb-6">Stand Out ANYWHERE</h2>
-                    <p class="text-gray-600 mb-8">Make a statement with pieces that demand attention.</p>
-                    <a href="https://anatome.shop/shop/" class="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors">
-                        Make Your Statement
-                    </a>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"I love how my Anatome bag ages. The leather develops such a beautiful patina over time. It's like it tells my story."</p>
+                    <div class="font-semibold">Michael Chen</div>
+                    <div class="text-sm text-gray-500">Creative Director</div>
                 </div>
-                <div class="order-1 md:order-2">
-                    <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
-                         alt="Stand out anywhere" 
-                         class="rounded-lg shadow-xl">
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"The limited edition aspect makes it special. Knowing only 74 other people have the same piece is amazing."</p>
+                    <div class="font-semibold">Emma Rodriguez</div>
+                    <div class="text-sm text-gray-500">Architect</div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"Customer service is outstanding. They helped me track down the exact piece I wanted. True dedication!"</p>
+                    <div class="font-semibold">David Thompson</div>
+                    <div class="text-sm text-gray-500">Business Executive</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-gray-50">
+    <section id="faq" class="py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md">
-                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-50 transition-colors">
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-100 transition-colors">
                         How limited are the editions?
                     </button>
                     <div class="px-6 pb-4">
-                        Each color variant is limited to only 75 pieces worldwide.
+                        Each color variant is strictly limited to 75 pieces worldwide. Once sold out, that specific color will never be produced again, ensuring the exclusivity of your piece.
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md">
-                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-50 transition-colors">
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-100 transition-colors">
                         What's your return policy?
                     </button>
                     <div class="px-6 pb-4">
-                        We offer a 100% satisfaction guarantee with full refunds upon return.
+                        We offer a 30-day satisfaction guarantee with free returns worldwide. If you're not completely satisfied, we'll provide a full refund including shipping costs.
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md">
-                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-50 transition-colors">
-                        How long is shipping?
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-100 transition-colors">
+                        How do you ensure authenticity?
                     </button>
                     <div class="px-6 pb-4">
-                        We offer fast worldwide shipping with delivery within 5 days.
+                        Each piece comes with a unique serial number and certificate of authenticity. You can verify your item's authenticity through our online database.
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <button class="w-full px-6 py-4 text-left font-semibold hover:bg-gray-100 transition-colors">
+                        What's included with my purchase?
+                    </button>
+                    <div class="px-6 pb-4">
+                        Your purchase includes the item, a premium dust bag, certificate of authenticity, care instructions, and our signature gift packaging.
                     </div>
                 </div>
             </div>
@@ -171,11 +278,17 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-24 bg-black text-white">
-        <div class="container mx-auto px-4 text-center">
+    <section class="py-24 bg-black text-white relative">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&h=900&fit=crop&q=80" 
+                 alt="CTA background" 
+                 class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to Own Something Unique?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join the exclusive community of Anatome owners and make your mark with a piece that's truly yours.</p>
             <a href="https://anatome.shop/shop/" 
-               class="inline-block bg-white text-black px-8 py-4 rounded-md text-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 duration-300">
+               class="inline-block bg-white text-black px-8 py-4 rounded-md text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                 Shop Now
             </a>
         </div>
@@ -192,21 +305,36 @@
                 <div>
                     <h4 class="font-semibold mb-4">Contact</h4>
                     <p class="text-gray-400">john@anatome.shop</p>
+                    <p class="text-gray-400 mt-2">+1 (555) 123-4567</p>
+                    <address class="text-gray-400 mt-2">
+                        123 Design Street<br>
+                        Fashion District<br>
+                        New York, NY 10001
+                    </address>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Shop</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="hover:text-white transition-colors duration-300">Benefits</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors duration-300">About</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors duration-300">FAQ</a></li>
+                        <li><a href="https://watsonventures.github.io/anatome-is-the-scaffolding-of-life--each-piece-is-unique-just-like-its-humans-2025-02-11-irhu0/blog.html" class="hover:text-white transition-colors duration-300">Blog</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://watsonventures.github.io/anatome-is-the-scaffolding-of-life--each-piece-is-unique-just-like-its-humans-2025-02-11-irhu0/privacy.html" class="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="https://watsonventures.github.io/anatome-is-the-scaffolding-of-life--each-piece-is-unique-just-like-its-humans-2025-02-11-irhu0/terms.html" class="hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                    </ul>
+                    <h4 class="font-semibold mt-6 mb-4">Follow Us</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="hover:text-gray-300 transition-colors"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="hover:text-gray-300 transition-colors"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="hover:text-gray-300 transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-gray-300 transition-colors duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-300 transition-colors duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-300 transition-colors duration-300"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-300 transition-colors duration-300"><i class="fab fa-pinterest text-xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -215,5 +343,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
